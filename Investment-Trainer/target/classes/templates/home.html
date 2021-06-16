@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Investment Trainer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+
+
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Last Traded Price</th>
+        <th>Last Buy Price</th>
+        <th>Last Sell Price</th>
+    </tr>
+    <tr th:each="stockStat : ${StocksStats}">
+        <td th:text="${stockStat.company}"></td>
+        <td th:text="${stockStat.last_Traded_Price}"></td>
+        <td th:text="${stockStat.last_Buy_Price}"></td>
+        <td th:text="${stockStat.last_Sell_Price}"></td>
+    </tr>
+</table>
+
+
+</body>
+
+</html>
